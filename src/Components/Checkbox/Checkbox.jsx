@@ -10,20 +10,22 @@ class Checkbox extends Component {
   }
 
   onValueChanged = () => {
-    if(this.state.isChecked) {
-      this.setState({isChecked: false})
-    } else {
+    if(!this.state.isChecked) {
       this.setState({isChecked: true})
+    } else {
+      this.setState({isChecked: false})
     }
     console.log(this.state.isChecked);
+    this.props.onClick();
   }
 
   render() {
     return (
-      <label className='Checkbox' onClick={this.onValueChanged}>
-        <input type='checkbox' className='Checkbox_input' />
-        <span className='Checkbox_indicator'>{this.props.text}</span>
-      </label>
+      <div className='Checkbox' onChange={this.onValueChanged}>
+        <input type='checkbox' className={`Checkbox_input ${
+          (this.props.className) ? this.props.className : ''
+        }`} />
+      </div>
     )
   }
 }

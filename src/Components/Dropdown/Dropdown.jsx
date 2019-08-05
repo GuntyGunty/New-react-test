@@ -19,8 +19,8 @@ class Dropdown extends Component {
 
   render() {
     return (
-      <div className="Dropdown">
-        <button className="Dropdown_button" onClick={this.handleClick}>{this.props.text}</button>
+      <div className='Dropdown'>
+        <button className='Dropdown_button' onClick={this.handleClick}>{this.props.text}</button>
         <div className={`Dropdown_wrapper ${this.state.isOpen ? '-open' : ''}`} >
           {this.props.children}
         </div>

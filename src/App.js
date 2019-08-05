@@ -7,19 +7,27 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Alesha',
+      name: 'Alesha'
     }
   }
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <span>{this.state.name}</span>
 
-        <Dropdown text="click me!">
+        <Dropdown text='click me!'>
           <span>hi!</span>
         </Dropdown>
-        <Checkbox text="choose me!"></Checkbox>
+        <Checkbox text='choose me!' onClick={() => {
+          console.log(this);
+          console.log('its checked!');
+        //  if(this.checked) {
+        //   this.className='-checked'
+        //  } else {
+        //   this.className=''
+        //  }
+        }}></Checkbox>
         <span>some content</span>
       </div>
     );
