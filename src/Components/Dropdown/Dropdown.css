@@ -1,0 +1,41 @@
+.Dropdown {
+  position: relative;
+}
+
+.Dropdown_wrapper {
+  display: none;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100px;
+  padding: 1em;
+  z-index: 1;
+}
+
+.Dropdown_wrapper.-open {
+  display: block;
+}
+
+.Dropdown_wrapper.-open::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(45deg)
+}
+
+.Dropdown_button {
+  padding: 0.5em 1em;
+  margin: 2em 0 2em 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ccc;
+  outline: none;
+}

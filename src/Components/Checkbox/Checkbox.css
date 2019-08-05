@@ -1,0 +1,41 @@
+.Checkbox {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.Checkbox_input {
+  display: none;
+}
+
+.Checkbox_indicator {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.Checkbox_indicator::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.Checkbox_indicator::after{
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  left: 3px;
+  top: 6px;
+  display: none;
+  position: absolute;
+  background-color: red;
+}
+
+.Checkbox_input:checked + .Checkbox_indicator::after {
+  display: block;
+}
