@@ -19,7 +19,7 @@ class App extends Component {
         <Dropdown text='click me!'>
           <span>hi!</span>
         </Dropdown>
-        <Checkbox text='choose me!' onClick={(element) => {
+        <Checkbox text='choose me!' onValueChanged={(element) => {
           console.log(element);
         }}></Checkbox>
         <span>some content</span>

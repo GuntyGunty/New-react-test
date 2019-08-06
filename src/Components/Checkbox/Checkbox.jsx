@@ -9,7 +9,7 @@ class Checkbox extends Component {
     }
   }
 
-  onValueChanged = () => {
+  changeValue = () => {
     if(!this.state.isChecked) {
       this.setState({isChecked: true})
     } else {
@@ -19,8 +19,8 @@ class Checkbox extends Component {
 
   render() {
     return (
-      <div className='Checkbox' onClick={this.props.onClick(this.state.isChecked)}>
-        <input type='checkbox' onChange={this.onValueChanged}  className={`Checkbox_input ${
+      <div className='Checkbox' onClick={this.props.onValueChanged(this.state.isChecked)}>
+        <input type='checkbox' onChange={this.changeValue}  className={`Checkbox_input ${
           (this.props.className) ? this.props.className : ''
         }`} />
       </div>
