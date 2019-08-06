@@ -19,14 +19,8 @@ class App extends Component {
         <Dropdown text='click me!'>
           <span>hi!</span>
         </Dropdown>
-        <Checkbox text='choose me!' onClick={() => {
-          console.log(this);
-          console.log('its checked!');
-        //  if(this.checked) {
-        //   this.className='-checked'
-        //  } else {
-        //   this.className=''
-        //  }
+        <Checkbox text='choose me!' onClick={(element) => {
+          console.log(element);
         }}></Checkbox>
         <span>some content</span>
       </div>
