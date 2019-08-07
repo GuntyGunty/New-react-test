@@ -9,23 +9,20 @@ class Checkbox extends Component {
     }
   }
 
-  changeValue = () => {
-    if(!this.state.isChecked) {
-      this.setState({isChecked: true})
-    } else {
-      this.setState({isChecked: false})
-    }
+  onChange = (e) => {
+    this.setState({ isChecked: !this.state.isChecked }, function() {
+      this.props.onValueChanged(this.state.isChecked);
+    });
   }
 
   render() {
     return (
-      <div className='Checkbox' onClick={this.props.onValueChanged(this.state.isChecked)}>
-        <input type='checkbox' onChange={this.changeValue}  className={`Checkbox_input ${
-          (this.props.className) ? this.props.className : ''
-        }`} />
-      </div>
-    )
-  }
+        <div className="Checkbox">
+            <input type="checkbox" onChange={this.onChange} />
+            <span>Some text</span>
+        </div>
+    );
+}
 }
 
 export default Checkbox;
