@@ -17,12 +17,12 @@ class Checkbox extends Component {
 
   render() {
     return (
-        <div className="Checkbox">
-            <input type="checkbox" onChange={this.onChange} />
-            <span>Some text</span>
-        </div>
+      <div className="Checkbox">
+          <input type="checkbox" onChange={this.onChange} />
+          <span>Some text</span>
+      </div>
     );
-}
+  }
 }
 
 export default Checkbox;

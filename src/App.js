@@ -15,7 +15,6 @@ class App extends Component {
     return (
       <div className='App'>
         <span>{this.state.name}</span>
-
         <Dropdown text='click me!'>
           <span>hi!</span>
         </Dropdown>
