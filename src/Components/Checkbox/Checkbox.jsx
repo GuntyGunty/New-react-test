@@ -4,8 +4,9 @@ import './Checkbox.css'
 class Checkbox extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      isChecked: false
+      isChecked: false,
     }
   }
 

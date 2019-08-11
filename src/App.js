@@ -7,20 +7,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Alesha'
+      name: 'Alesha',
+      isDropdownOpen: false
     }
   }
 
   render() {
     return (
       <div className='App'>
-        <span>{this.state.name}</span>
+        {/* <span>{this.state.name}</span> */}
         <Dropdown text='click me!'>
-          <span>hi!</span>
+            <span>Hello!</span>
         </Dropdown>
-        <Checkbox text='choose me!' onValueChanged={(element) => {
+        <Dropdown text='click me!'>
+            <span>Hi</span>
+        </Dropdown>
+        <Checkbox text='choose me!' onValueChanged={(value) => {
           // return (e) => console.log(element);
-          console.log(element);
+          console.log(value);
         }}></Checkbox>
         <span>some content</span>
       </div>
@@ -28,6 +32,7 @@ class App extends Component {
   }
 }
 
-export default App;
 
+
+export default App;
 
